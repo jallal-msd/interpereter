@@ -15,7 +15,7 @@ var keyword = map[string]TokenType {
     "if":IF,
     "else":ELSE,
     "return":RETURN,
-    
+    "lianet":LIANET,
 }
 func LookupIdent(ident string) TokenType{
     if tok, ok := keyword[ident]; ok {
@@ -61,4 +61,6 @@ const (
 
     EQ = "=="
     NOT_EQ = "!="
+
+    LIANET = "lianet"
 )

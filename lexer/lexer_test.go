@@ -19,7 +19,7 @@ func TestNextToken(t *testing.T){
             return false
         }
         ==
-        
+        lianet        
         `
     
     tests :=[]struct {
@@ -82,6 +82,7 @@ func TestNextToken(t *testing.T){
         {token.FALSE, "false"},
         {token.RBRACE, "}"},
         {token.EQ, "=="},
+        {token.LIANET, "lianet"},
         {token.EOF, ""},      
     }
     
