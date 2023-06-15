@@ -34,7 +34,7 @@ func TestLetStatements(t *testing.T){
 
     for i, tt := range tests {
         stmt := program.Statements[i] 
-        if !testLetStatement(t,stmnt, tt.expectedIdentifier){
+        if !testLetStatement(t,stmt, tt.expectedIdentifier){
             return 
         }
     }
@@ -56,7 +56,7 @@ func testLetStatement(t *testing.T, s ast.Statement, name string ) bool {
     }
 
     if letStmnt.Name.TokenLiteral() != name {
-        t.Error("s.Name not %s, got=%s", name, letStmnt.Name)
+        t.Errorf("s.Name not %s, got=%s", name, letStmnt.Name)
         return false
     }
     return true
